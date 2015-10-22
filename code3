@@ -1,0 +1,63 @@
+//1.h
+//Question number 5 in chapter review without methode implementation.
+#ifndef __BankAccount__
+#define __BankAccount__
+#include<string>
+using namespace std;
+class BankAccount
+	Public :
+		BankAccount(string name,double balance);
+		BankAccount(string name);
+		void Display();
+		double Deposit(double amount);
+		void Withdraw(double amount);
+		double CurrentBalance();
+	Private:
+			string DepositorName;
+			string AccountNumber;
+			double balance;
+			
+};
+#endif
+___________________________________________________________________________
+2.cpp
+
+//Question 7 constructor for BankAccount class.
+#include"1.h"
+
+
+//Question 1 in programming exercises of function definitions from question 5 in chapter review
+
+BankAccount(string name,double balance=x)
+{
+	balance =x;
+	DepositorName=name;
+}
+BankAccount(string name)
+		{
+                balance=1000;
+				DepositorName= name;
+		}
+		
+		double Deposit(double amount)
+		{
+			balance+=amount;
+			return balance;
+		}
+		void Withdraw(double amount)
+		{
+			balance-=amount;
+		}
+___________________________________________________________________
+//main.cpp
+		
+#include"1.h"
+void main()
+{
+	BankAccount y("Ahmed");
+	BankAccount y("Ahmed",5000);
+	y.Deposit(5000);
+    cout<<"the amount of money "<<	y.Deposit(5000)<<endl;
+
+	
+}
